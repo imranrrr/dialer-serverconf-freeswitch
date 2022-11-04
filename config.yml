@@ -1,0 +1,16 @@
+development: &common_settings
+  logging : monthly
+  mysql_host: localhost
+  mysql_user: user
+  mysql_password: password
+  mysql_db: dialer_development
+  drubyserver : druby://0.0.0.0:1234
+  FS:
+    - 192.168.5.126
+    - 192.168.5.236
+  FSPORT: 8021
+  FSAUTH: ClueCon
+production:
+  <<: *common_settings
+test:
+  <<: *common_settings
